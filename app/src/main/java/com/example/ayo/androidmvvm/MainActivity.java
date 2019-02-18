@@ -57,7 +57,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onChanged(@Nullable List<Note> notes) {
                 //Implement Recycler View
-                adapter.setNote(notes);
+//                adapter.setNote(notes);
+                //here we use submit list instead of the former . this is a method of the listAdapter
+                adapter.submitList(notes);
             }
         });
 //this class object help us to implement swipe to delete on our recycler view Item
